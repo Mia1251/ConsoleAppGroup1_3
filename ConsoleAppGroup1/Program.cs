@@ -96,19 +96,19 @@ namespace ConsoleAppGroup1
 
             while (notNumber)
             {
-                
+
 
                 try
                 {
-                   //this line of code will not run if Convert above has a exception
+                    //this line of code will not run if Convert above has a exception
                 }
                 catch (FormatException)
                 {
-                    
+
                 }
                 catch (OverflowException)
                 {
-                   
+
                 }
                 finally//will always run this part
                 {
@@ -159,15 +159,19 @@ namespace ConsoleAppGroup1
 
         static void ListEx()
         {
-            List<double> tempeturs = new List<double>();
+            List<double> temperatures = new List<double> { 200d, 150d, 225u, 300.5, 175d };
+            temperatures.Sort();
+            Console.WriteLine(string.Join(" , ", temperatures));
 
-     
         }
 
 
         static void ArrayEx()
         {
-            string[] names = new string[5];
+            string[] names = { "Maria", "Jaime", "Marco", "Jan", "Helio" };
+            Array.Sort(names);
+            Console.WriteLine(string.Join(" , ", names));
+
 
 
             //sort
@@ -177,9 +181,12 @@ namespace ConsoleAppGroup1
         static void DictionaryEx()
         {
 
-            //Dictionary<int, string> socialNumberVualt = new Dictionary<int, string>();
+            Dictionary<string, string> socialNumberVualt = new();
+            socialNumberVualt.Add("123456-2123", "Åsa");
+            socialNumberVualt.Add("234567-3312", "Helio");
+            socialNumberVualt.Add("961116-3341", "Maria");
 
-            
+
         }
     }
 }
